@@ -1,0 +1,426 @@
+body {
+  background: #f4f9ee;
+  max-width: 80%;
+  background-image: url('images/swirly-mobile.png'), url('images/swirly-mobile.png');
+  background-repeat: no-repeat;
+  background-position: 100% 200px, left 15% bottom 180px;
+  background-size: auto;
+  color: #2d3132;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.2rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+#pop-out {
+  background: rgba(17, 93, 112, 0.1);
+  margin: 1em -5.5%;
+  padding: 0 5%;
+}
+
+/* large screen */
+@media only screen and (min-width: 701px) { 
+  body {
+    max-width: 80%;
+    background-image: url('images/swirly.png'), url('images/swirly-rotated.png');
+    background-repeat: no-repeat;
+    background-position: -5% 80px, right 5% bottom 50px;
+    background-size: auto;
+  }
+
+  #pop-out {
+    margin: 2em -12.5% 3em;
+    padding: 0 12.5%;
+  }
+
+  #intro {
+    padding: 0 3em;
+  }
+
+  .intro {
+    display: flex;
+    align-items: center;
+  }
+
+  footer {
+    margin-top: 3em;
+  }
+
+  footer p {
+    text-align: center;
+  }
+}
+
+#logo {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.intro a.button {
+  margin: 0 1em 1em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  margin-top: 0;
+}
+
+footer p {
+  margin-top: 1em;
+}
+
+/* text */
+h1 {
+  color: #425d28;
+}
+
+h2 {
+  margin: 1.5em 0 0.25em;
+}
+
+p {
+  margin: 0 0 1.5em
+}
+
+.spaced {
+  line-height: 1.5em;
+}
+
+li {
+  margin: 0 0 0.5em;
+}
+
+a {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: 0 4px;
+}
+
+a:link, a:visited {
+  color: #115d70;
+}
+
+a:hover, a:focus, a:active, 
+button:hover, button:focus, button:active {
+  color: #fff;
+  background: #115d70;
+  outline: 2px solid transparent; /* for windows high contrast */
+}
+
+button:focus {
+    background: rgba(7, 159, 197, .6);
+}
+
+a:active {
+  background: #079fc5;
+}
+
+.grid a:not(.button) {
+  text-decoration: underline;
+  text-decoration-color: #a6bbcb;
+  text-underline-offset: 1.5px;
+}
+
+.grid a:not(.button):hover, a:not(.button):focus, a:not(.button):active {
+  text-decoration: none;
+}
+
+a.button {
+  display: inline-block;
+  padding: 1em 2em;
+  margin: 1em auto 0;
+  border: 2px solid #115d70;
+  border-radius: 0;
+}
+
+a.button:active {
+  background: #079fc5;
+  border: 2px solid #079fc5;
+}
+
+a.button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.intro a.button::after {
+  position: relative;
+}
+
+a#logo:focus {
+  outline: 2px solid #a6bbcb;
+}
+
+a#logo:active {
+  outline: 2px solid #115d70;
+}
+
+a#logo:hover, a#logo:focus, a#logo:active {
+  background: none;
+}
+
+/* nav */
+
+/* large screen */
+@media only screen and (min-width: 701px) { 
+  nav {
+    text-align: center;
+    line-height: 2em;
+    margin-bottom: 1em;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  nav li {
+    display: inline;
+    margin: 0 1.25rem;
+  }
+    
+  nav a {
+    padding: 8px;
+  }
+}
+
+/* small screen */
+@media only screen and (max-width: 700px) { 
+
+  #logo {
+    width: 70%;
+  }
+
+  nav ul {
+    column-count: 2;
+    padding: 0;
+    margin-top: 0;
+    width: 75%
+  }
+
+  nav li {
+    display: block;
+    white-space: nowrap;
+    margin: 0 1em 1em 0;
+  }
+
+  nav a {
+    padding: 4px;
+  }
+    
+  footer {
+    margin-top: 100px;
+  }
+
+}
+
+/* cards */
+ul.cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 1.5rem;
+  grid-row-gap: 1.5rem;
+  padding: 0;
+}
+
+.cards li {
+  background: #fff;
+  padding: 1.5rem 1rem 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+      
+.cards li:hover,
+.cards li:focus-within {
+  box-shadow: 0 0 0.5em #115d70;
+}
+
+.cards a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.cards a:hover, .cards a:focus, .cards a:active {
+  color: #115d70;
+  background: none;
+  outline: 2px solid transparent; /* for windows high contrast */ 
+}
+
+/* products */
+.products div {
+  position: relative;
+}
+
+.products div:first-of-type h2 {
+  margin-top: 0;
+}
+
+.products p {
+  overflow: hidden; /* prevents text wrapping under images */
+}
+
+.products div:nth-of-type(even) img { 
+  float: right; 
+  clear: both;
+  margin-left: 2em;
+}
+
+.products div:nth-of-type(odd) img { 
+  float: left; 
+  clear: both; 
+  margin-right: 2em;
+}
+
+.products img {
+  width: 60%;
+  margin-bottom: 2em;
+}
+
+
+@media (max-width: 700px) {
+
+  .products img {
+    width: 100%;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+}
+
+.products h2 {
+  color: #115d70;
+}
+
+/* grid */
+.grid {
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  grid-gap: 2em;
+}
+
+.no-gap {
+  grid-gap: 0 2em;
+}
+
+@media (max-width: 700px) {
+  
+  .grid {
+    grid-template-columns: 100%;
+    grid-gap: 0.5em;
+  }
+  
+}
+
+/* helpers */
+.clear {
+  clear: both;
+}
+
+.frame {
+  border: 1px solid #a6bbcb;
+  background: #e7ecef;
+  padding: 0.75em 0.75em 0.25em;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .frame {
+    margin: 0 0 2em 0;
+  }
+}
+
+.caption {
+  font-weight: bold;
+  margin: 0.25em 0;
+  color: #425d28;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #f4f9ee;
+    background-color: #09313b;
+    background-image: url('images/swirly-mobile-dark.png'), url('images/swirly-mobile-dark.png');
+  }  
+  #pop-out {
+    background: rgba(220,237,193, 0.1);
+  }
+    
+  h1 {
+    color: #9cb272;
+  }
+    
+  .products h2 {
+    color: #95E5D2;
+  }
+  
+  #logo img {
+    content:url('images/teak-boutique-white.png')
+  }
+
+  a:link, a:visited {
+    color: #cbe3a9;
+  }
+    
+  a:hover, a:focus, a:active, 
+  button:hover, button:focus, button:active {
+    color: #304529;
+    background: #cbe3a9;
+  }
+    
+  a.button {
+    border: 2px solid #B3F082;
+  }
+    
+  .cards li, .frame {
+    background: #052027;
+    border: none;
+  }
+    
+  .cards li:hover,
+  .cards li:focus-within {
+    box-shadow: 0 0 0.5em #95E5D2;
+  }
+    
+  .cards a:hover, .cards a:focus, .cards a:active {
+    color: #cbe3a9;
+  }
+    
+  .caption {
+    color: #9EC8B9;
+  }
+    
+  @media only screen and (min-width: 701px) { 
+    body {
+      background-image: url('images/swirly-dark.png'), url('images/swirly-rotated-dark.png');
+    }
+  }
+}
