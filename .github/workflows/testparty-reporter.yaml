@@ -10,7 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: TestParty Reporter
-        uses: ./
         with:
           testparty_token: ${{ secrets.TESTPARTY_TOKEN }}
           repository_name: ${{ github.repository }}
